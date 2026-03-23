@@ -1,4 +1,78 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Counter & Theme Management using Zustand
+
+This is a [**React Native**](https://reactnative.dev) project demonstrating global state management using Zustand.
+
+## 📋 Project Overview
+
+This assignment implements:
+- **Counter Store**: A global counter with increase, decrease, and reset functionality
+- **Theme Toggle Store**: A global theme state with dark/light mode toggle
+
+## 📁 Project Structure
+
+```
+src/
+├── store/
+│   ├── useCounterStore.js      # Counter state management
+│   └── useThemeStore.js         # Theme state management
+├── screens/
+│   ├── CounterScreen.js         # Counter UI with selective subscription
+│   └── ThemeScreen.js           # Theme toggle UI with dynamic styling
+└── styles/
+    ├── AppStyles.js             # App component styles
+    ├── CounterScreenStyles.js   # Counter screen styles
+    └── ThemeScreenStyles.js     # Theme screen styles
+```
+
+## ✨ Features
+
+### Counter Screen
+- Display current count value
+- Increase button (+1)
+- Decrease button (-1)
+- Reset button (back to 0)
+- Uses selective subscription for optimal performance
+
+### Theme Screen
+- Display current theme mode (Light/Dark)
+- Toggle between light and dark themes
+- Dynamic background color changes
+- Smooth visual transitions
+
+## 🎯 Key Concepts Demonstrated
+
+1. **Zustand Store Creation** using `create()`
+2. **State Update Functions** using `set()`
+3. **Selective Subscription** in components
+4. **Clean Code Organization** with separated stores and screens
+
+---
+
+# 🤔 Reflection Questions
+
+## 1. What does `create()` do in Zustand?
+
+The `create()` function is the core function of Zustand that creates a store 
+
+---
+
+## 2. What is selective subscription?
+
+Selective subscription is a pattern where components subscribe only to the specific pieces of state they need, rather than the entire store.
+
+---
+
+## 3. Why is subscribing to the entire store considered bad practice?
+
+Subscribing to the entire store causes **unnecessary re-renders** and **performance issues**.
+
+---
+
+## 4. What is one advantage of Zustand over Context API?
+
+**No Provider Hell & Better Performance**
+
+---
 
 # Getting Started
 
